@@ -234,7 +234,7 @@
 			cards[i].id = i;
 			cards[i].a.id = i;
 		}
-		//savelists();
+		savecards();
 	}
 
 	loadlists();
