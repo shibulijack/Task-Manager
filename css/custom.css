@@ -1,0 +1,27 @@
+		body {
+		padding-top: 60px; 
+		background: #555 url('../img/carbon_fibre.png') repeat;	
+		}
+		
+		.list_head {
+			margin: -20px -20px 20px -20px;
+			padding: 5px;
+			background: #ddd;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		
+		.list > .close {
+			line-height: 0;
+		}
+		
+		.card_item {
+			margin-bottom: 10px;
+			border-bottom: 1px #ddd dotted;
+		}
+		
+		.well {
+			background-color: #eee;
+		}
