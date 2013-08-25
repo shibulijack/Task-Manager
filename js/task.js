@@ -103,15 +103,21 @@
 		d.appendChild(h);
 		p.h = h;
 		
+		var t=document.createElement('div');
+		t.className = "card_box";
+		
+		
 		var c= document.createElement('div');
 		c.setAttribute('id', 'cards-'+id);
 		c.setAttribute('ondrop', 'drop(event)');
 		c.setAttribute('ondragover', 'allowDrop(event)');
-		d.appendChild(c);
+		t.appendChild(c);
+		
 
 		var cont = document.createElement('div');
 		cont.innerHTML = '<form onsubmit="return addCard('+id+')"><textarea class="span3" rows="3" cols="200" name="'+id+'_card_content" id="'+id+'_card_content" placeholder="Your task description" ></textarea><input type="hidden" id="card_no" name="card_no" value="'+id+'"><button type="submit" class="btn btn-info">Add Task</button></form>';
-		d.appendChild(cont);
+		t.appendChild(cont);
+		d.appendChild(t);
 		//p.cont = cont;
 		container.appendChild(d);
 	}
