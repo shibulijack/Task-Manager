@@ -110,7 +110,7 @@
 		d.appendChild(c);
 
 		var cont = document.createElement('div');
-		cont.innerHTML = '<form onsubmit="return addCard('+id+')"><textarea class="span12" rows="3" cols="200" name="'+id+'_card_content" id="'+id+'_card_content" placeholder="Your task description" ></textarea><input type="hidden" id="card_no" name="card_no" value="'+id+'"><button type="submit" class="btn btn-primary">Add Task</button></form>';
+		cont.innerHTML = '<form onsubmit="return addCard('+id+')"><textarea class="span12" rows="3" cols="200" name="'+id+'_card_content" id="'+id+'_card_content" placeholder="Your task description" ></textarea><input type="hidden" id="card_no" name="card_no" value="'+id+'"><button type="submit" class="btn btn-info">Add Task</button></form>';
 		d.appendChild(cont);
 		//p.cont = cont;
 		container.appendChild(d);
@@ -206,4 +206,26 @@
 		ev.preventDefault();
 		var data=ev.dataTransfer.getData("Text");
 		document.getElementById("cards-0").appendChild(document.getElementById(data));
+	}
+	
+	/* Custom */
+	
+	function toggleDiv(b){
+	console.log(b);
+	if(b==1)
+	{
+		document.getElementById("new_list").style.display = "block";
+		document.getElementById("new_list_button").style.display = "none";
+		}
+	else
+	{
+		document.getElementById("new_list_button").style.display = "block";
+		document.getElementById("new_list").style.display = "none";
+	}
+	}
+	
+	function toggleDivs(showDiv,hideDiv)
+	{
+		document.getElementById(showDiv).style.display = "block";
+		document.getElementById(hideDiv).style.display = "none";
 	}

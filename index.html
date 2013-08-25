@@ -45,11 +45,15 @@
 			 
 		</div>
 		<div class="span3">
-		<form class="well" onsubmit="return addList()">
+		<button id="new_list_button" style="display:block;width: 200px; height: 200px; font-size: 60px;" type="button" class="btn btn-info" onclick="toggleDivs('new_list','new_list_button')">+</button>
+		
+		<form class="well" style="display:none" onsubmit="return addList()" id="new_list">
+				<a class="close" href="#" onclick="toggleDivs('new_list_button','new_list')">x</a>
 				<input type="text" name="title" id="title" placeholder="List name"/>
 				<br />
-			 	<button type="submit" class="btn btn-primary">Add List</button>
+			 	<button type="submit" class="btn btn-info">Add List</button>
 		</form>
+		
 		</div>
 		</div>
 		
