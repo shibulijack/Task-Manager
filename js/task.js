@@ -110,7 +110,7 @@
 		d.appendChild(c);
 
 		var cont = document.createElement('div');
-		cont.innerHTML = '<form onsubmit="return addCard('+id+')"><textarea class="span12" rows="3" cols="200" name="'+id+'_card_content" id="'+id+'_card_content" placeholder="Your task description" ></textarea><input type="hidden" id="card_no" name="card_no" value="'+id+'"><button type="submit" class="btn btn-info">Add Task</button></form>';
+		cont.innerHTML = '<form onsubmit="return addCard('+id+')"><textarea class="span3" rows="3" cols="200" name="'+id+'_card_content" id="'+id+'_card_content" placeholder="Your task description" ></textarea><input type="hidden" id="card_no" name="card_no" value="'+id+'"><button type="submit" class="btn btn-info">Add Task</button></form>';
 		d.appendChild(cont);
 		//p.cont = cont;
 		container.appendChild(d);

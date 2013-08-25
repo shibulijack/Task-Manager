@@ -25,3 +25,9 @@
 		.well {
 			background-color: #eee;
 		}
+		
+		.navbar .brand {
+			float: none;
+			
+			text-align: center;
+		}
