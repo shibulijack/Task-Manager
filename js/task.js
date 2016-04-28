@@ -38,6 +38,26 @@
 		}
 	}
 	
+	function savecards(){
+
+		var t = [];
+		if (localStorage && cards[0] != undefined){
+			t = [];
+			for (var i in cards){
+				var p = cards[i];
+				t.push({
+					c : p.c,
+					n : p.n,
+					id : p.id
+				});
+
+			}
+			console.log(t);
+			localStorage["cards"] = JSON.stringify(t);
+		}
+	}
+
+	
 	function loadlists(){
 
 		if (localStorage){
@@ -45,14 +65,37 @@
 			if (localStorage["lists"] != undefined){
 
 				var t = JSON.parse(localStorage["lists"]);
+				console.log("Load lists: "+ t);
 				for (var i in t){
 					var p = t[i];
-
+					
 					createListDisplay(p.t);
 				}
 			}
 		}
 	}
+	
+	function loadcards(){
+	
+	
+
+		if (localStorage){
+
+			if (localStorage["cards"] != undefined){
+			
+			
+
+				var t = JSON.parse(localStorage["cards"]);
+				console.log("Load cards: "+ t);
+				for (var i in t){
+					var p = t[i];
+					console.log("lists: "+ p.n);
+					createCardDisplay(p.c,p.n);
+				}
+			}
+		}
+	}
+
 
 
 	function deleteList(id){
@@ -132,7 +175,7 @@
 		//console.log("In add: " + c);
 		createCardDisplay(c,no);
 
-		//savelists();
+		savecards();
 		
 		return false;		
 	}
@@ -151,6 +194,7 @@
 		cards.push( {
 		d : d,	
 		c : content,
+		n : no,
 		id : id
 		});
 		var p = cards[cards.length - 1];
@@ -190,10 +234,11 @@
 			cards[i].id = i;
 			cards[i].a.id = i;
 		}
-		//savelists();
+		savecards();
 	}
 
 	loadlists();
+	loadcards();
 	
 	/* Drag and Drop */
 	

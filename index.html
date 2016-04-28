@@ -44,11 +44,11 @@
 		 <div id="listContainer" >
 			 
 		</div>
-		<div class="span3">
-		<button id="new_list_button" style="display:block;width: 200px; height: 200px; font-size: 60px;" type="button" class="btn btn-info" onclick="toggleDivs('new_list','new_list_button')">+</button>
+		<div class="span3 well">
+		<button id="new_list_button" style="display:block;width: 100%; height: 200px; font-size: 60px;margin-left: auto; margin-right: auto;" type="button" class="btn btn-info" onclick="toggleDivs('new_list','new_list_button')">+</button>
 		
-		<form class="well" style="display:none" onsubmit="return addList()" id="new_list">
-				<a class="close" style="line-height:0" href="#" onclick="toggleDivs('new_list_button','new_list')">x</a>
+		<form style="display:none" onsubmit="return addList()" id="new_list">
+				<a class="close" style="line-height:40px" href="#" onclick="toggleDivs('new_list_button','new_list')">x</a>
 				<h2 class="list_head">Create New List</h2>
 				<input type="text" name="title" id="title" placeholder="List name"/>
 				<br />
